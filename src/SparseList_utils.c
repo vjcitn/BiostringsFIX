@@ -39,8 +39,8 @@ SEXP _get_val_from_env(SEXP symbol, SEXP env, int error_on_unbound_value)
 	}
 	if (TYPEOF(ans) == PROMSXP)
 		ans = eval(ans, env);
-	if (ans != R_NilValue && NAMED(ans) == 0)
-		SET_NAMED(ans, 1);
+	/*if (ans != R_NilValue && NAMED(ans) == 0)
+		SET_NAMED(ans, 1);*/
 	return ans;
 }
 
